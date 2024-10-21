@@ -46,8 +46,8 @@ def fullgame(player,playerscore):
 # weigh list towards scrabble distribution
 # A-9, B-2, C-2, D-4, E-12, F-2, G-3, H-2, I-9, J-1, K-1, L-4, M-2, N-6, O-8, P-2, Q-1, R-6, S-4, T-6, U-4, V-2, W-2, X-1, Y-2, Z-1
     
-    cons = [ 'b','b', 'c','c', 'd','d','d','d', 'f','f', 'g','g','g', 'h','h', 'j', 'k', 'l','l','l','l', 'm','m', 'n','n','n','n','n','n', 'p','p', 'q', 'r','r','r','r','r','r', 's','s','s','s', 't','t','t','t','t','t', 'v','v', 'w','w', 'x', 'y','y', 'z']
-    vowels = ['a','a','a','a','a','a','a','a','a', 'e','e','e','e','e','e','e','e','e','e','e','e', 'i','i','i','i','i','i','i','i','i','o','o','o','o','o','o','o','o','u','u','u','u']
+    cons =  ["b","b","c","c","c","c","d","d","d","f","g","g","h","h","j","k","l","l","l","l","l","m","m","m","n","n","n","n","n","n","n","p","p","p","q","r","r","r","r","r","r","r","s","s","s","s","s","s","s","s","s","s","t","t","t","t","t","t","t","v","w","x","y","y","z"]
+    vowels = ["a","a","a","a","a","a","a","a","e","e","e","e","e","e","e","e","e","e","e","e","i","i","i","i","i","i","i","i","i","o","o","o","o","o","o","o","o","u","u","u"]
 
     choices = ["vowel", "consonant","v","c"]
     letterlist = []
@@ -65,11 +65,11 @@ def fullgame(player,playerscore):
 
             if typechoice in choices:
                 if typechoice == "consonant" or typechoice == "c":
-                    letterlist.append(cons[random.randint(0,len(cons))])
+                    letterlist.append(cons[random.randint(0,len(cons)-1)])
                     break
 
                 elif typechoice == "vowel" or typechoice == "v":
-                    letterlist.append(vowels[random.randint(0,len(vowels))])
+                    letterlist.append(vowels[random.randint(0,len(vowels)-1)])
                     break
             else:
                 print("invalid input")
@@ -80,9 +80,9 @@ def fullgame(player,playerscore):
     print("think of a word ")
     print("")
 
-    for i in range (30):
-        print(29 - i)
-        time.sleep(1)
+    # for i in range (30):
+    #     print(29 - i)
+    #     time.sleep(1)
 
     print("")
 
@@ -90,6 +90,7 @@ def fullgame(player,playerscore):
 
     while True:
         wordguess = input("guess the longest word you can now, ")
+        print("")
 
         if wordguess == "":
             break

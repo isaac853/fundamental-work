@@ -80,9 +80,9 @@ def fullgame(player,playerscore):
     print("think of a word ")
     print("")
 
-    # for i in range (30):
-    #     print(29 - i)
-    #     time.sleep(1)
+    for i in range (30):
+        print(29 - i)
+        time.sleep(1)
 
     print("")
 

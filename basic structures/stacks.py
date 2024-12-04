@@ -16,6 +16,7 @@ def push(data):
         print("stack is full")
 
 def pop():
+    global top
     if top > -1:
         temp = stack[top]
         top -= 1

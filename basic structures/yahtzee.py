@@ -384,7 +384,4 @@ playercount = temp[0]
 scorelist = temp[1]
 del temp
 
-# scorelist = playerturn(scorelist, 0)[0]
-# print(scorelist)
-
 fullgame(scorelist, playercount)

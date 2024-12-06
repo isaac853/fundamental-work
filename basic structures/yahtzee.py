@@ -362,7 +362,7 @@ def doloop(scorelist):
                     return True
     return False
 
-def fullgame(scorelist, playercount):
+def fullgame(scorelist, playercount):  
     turn = random.randint(0,playercount-1)
 
     loop = True
@@ -383,6 +383,9 @@ def fullgame(scorelist, playercount):
 
     for i in range(len(finalscorelist)):
         print(finalscorelist[i]["player"],":",finalscorelist[i]["score"])
+
+
+print("\nYAHTZEE \n--------------------------------------------------------")
 
 temp = playerno()
 playercount = temp[0]

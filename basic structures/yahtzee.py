@@ -24,8 +24,6 @@ def playerno():
     scorelist = []
     playercount = 0 
 
-    newplayer  = [[["-" for i in range(6)],["-" for i in range(7)],[0]]]
-
     playerNoInput = input("how many players do you want? ")
     while True:
         if intcheck(playerNoInput):
@@ -33,7 +31,8 @@ def playerno():
         playerNoInput = input ("invalid input, try again: ")
 
     for i in range(int(playerNoInput)):
-        scorelist += newplayer
+        newplayer  = [["-" for i in range(6)],["-" for i in range(7)],[0]]
+        scorelist.append(newplayer)
         playercount += 1
 
     return playercount, scorelist

@@ -193,6 +193,9 @@ def smallstraight(die):
         if die[i+1] == die[i]+1:
             count += 1
 
+        elif die[i+1] == die[i]:
+            pass
+        
         else: 
             count = 0
 
@@ -209,6 +212,9 @@ def largestraight(die):
         if die[i+1] == die[i]+1:
             count += 1
 
+        elif die[i+1] == die[i]:
+            pass
+        
         else: 
             count = 0
             
@@ -384,3 +390,5 @@ scorelist = temp[1]
 del temp
 
 fullgame(scorelist, playercount)
+
+

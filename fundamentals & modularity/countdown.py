@@ -100,8 +100,7 @@ def fullgame(player,playerscore):
 
         else:
             time.sleep(1)
-            print("word is not valid, try again")
-            print("your list is, ", letterlist)
+            print("your list is"," word", letterlist)
             print("")
 
     return playerscore + len(wordguess) 
